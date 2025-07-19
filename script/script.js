@@ -126,7 +126,12 @@ window.handleDriveStatus = function(data) {
 
 
 
-
+window.addEventListener("DOMContentLoaded", () => {
+  const isEdge = /Edg/.test(navigator.userAgent);
+  if (isEdge) {
+    document.getElementById("tracking-warning").style.display = "block";
+  }
+});
 const driveScript = document.createElement("script");
 driveScript.src = "https://script.google.com/macros/s/AKfycbzZWD494nU4_o4ublBpZ2tjdevYNSg1w9QOjH_pVmpN/exec?callback=handleDriveStatus";
 document.body.appendChild(driveScript);
