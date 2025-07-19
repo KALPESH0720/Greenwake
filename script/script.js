@@ -1,4 +1,4 @@
-// 🌿 GreenWake Form Submission with Cloudinary + Google Sheets
+
 
 document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -14,10 +14,10 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   }
 
   try {
-    // 📤 Upload image to Cloudinary
+   
     const imageForm = new FormData();
     imageForm.append("file", file);
-    imageForm.append("upload_preset", "greenwake_upload"); // ✅ Your Cloudinary unsigned preset
+    imageForm.append("upload_preset", "greenwake_upload");
 
     const uploadRes = await fetch("https://api.cloudinary.com/v1_1/djqgnr99t/image/upload", {
       method: "POST",
@@ -29,10 +29,10 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
     if (!imageUrl) throw new Error("Image upload failed.");
 
-    // 📬 Send data to Google Sheets via Apps Script
+    
     const sheetResponse = await fetch("https://script.google.com/macros/s/AKfycbwAnXKMVazXaRL0pNjAnOwIErsCVtEL9eYgIf5vFW7UWrWwsMW0QrPVFuRfl-QQ0yoQsg/exec", {
       method: "POST",
-      headers: { "Content-Type": "text/plain;charset=utf-8" }, // ✅ avoids CORS preflight
+      headers: { "Content-Type": "text/plain;charset=utf-8" }, 
       body: JSON.stringify({ name, email, imageUrl })
     });
 
@@ -49,7 +49,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   }
 });
 
-// 🌟 Load weekly contributors
+
 window.loadHeroes = function(data) {
   const container = document.getElementById("hero-cards");
   if (!container) return;
@@ -71,7 +71,7 @@ window.loadHeroes = function(data) {
   });
 };
 
-// 🏆 Load achievements
+
 window.loadAchievements = function(data) {
   const container = document.getElementById("achievement-cards");
   if (!container) return;
@@ -93,7 +93,7 @@ window.loadAchievements = function(data) {
   });
 };
 
-// 🚀 Inject JSONP scripts after DOM loads
+
 window.addEventListener("DOMContentLoaded", () => {
   const heroesScript = document.createElement("script");
   heroesScript.src = "https://script.google.com/macros/s/AKfycbxhO3KzrlQ25iOL6QJoNi7MBo6akouReImLKcyWKAqT/exec?sheet=Contributions&callback=loadHeroes";
@@ -126,7 +126,7 @@ window.handleDriveStatus = function(data) {
 
 
 
-// Inject JSONP
+
 const driveScript = document.createElement("script");
 driveScript.src = "https://script.google.com/macros/s/AKfycbzZWD494nU4_o4ublBpZ2tjdevYNSg1w9QOjH_pVmpN/exec?callback=handleDriveStatus";
 document.body.appendChild(driveScript);

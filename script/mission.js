@@ -23,10 +23,10 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   }
 
   try {
-    // 📤 Upload image to Cloudinary
+    
     const imageForm = new FormData();
     imageForm.append("file", file);
-    imageForm.append("upload_preset", "greenwake_upload"); // ✅ Your Cloudinary unsigned preset
+    imageForm.append("upload_preset", "greenwake_upload");
 
     const uploadRes = await fetch("https://api.cloudinary.com/v1_1/djqgnr99t/image/upload", {
       method: "POST",
@@ -38,10 +38,10 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
     if (!imageUrl) throw new Error("Image upload failed.");
 
-    // 📬 Send data to Google Sheets via Apps Script
+   
     const sheetResponse = await fetch("https://script.google.com/macros/s/AKfycbwAnXKMVazXaRL0pNjAnOwIErsCVtEL9eYgIf5vFW7UWrWwsMW0QrPVFuRfl-QQ0yoQsg/exec", {
       method: "POST",
-      headers: { "Content-Type": "text/plain;charset=utf-8" }, // ✅ avoids CORS preflight
+      headers: { "Content-Type": "text/plain;charset=utf-8" }, 
       body: JSON.stringify({ name, email, imageUrl })
     });
 
