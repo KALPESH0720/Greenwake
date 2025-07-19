@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.24/bundled/lenis.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+ 
+
+
+<title>GreenWake</title>
+</head>
+<body>
+<nav>
+
+    <section class="nav">
+    
+      <img src="icons/logo-transparent.png" alt="">
+    <ul>
+        <li><a href="#">Home</a></li>
+       
+        <li><a href="/htmlfiles/solution.html">Solutions</a></li>
+        <li><a href="/htmlfiles/heros.html">Our Hero's</a></li>
+        <li><a href="/htmlfiles/mission.html">Mission</a></li>
+
+    </ul>
+      </section>
+
+    
+</nav>
+
+<main>
+    <section class="msg">
+<h1>Welcome</h1>
+<h2>To</h2>
+<h1>GreenWake</h1>
+    </section>
+   <h1 class="head">Upcoming Community Drives</h1>
+    <div id="drive-message">
+  <!-- Message or button will appear here -->
+</div>
+
+
+
+
+
+
+ <h2 class="head">Heros's Of This Week</h2>
+    <section class="heros">
+      <div class="scroll-container">
+      <section class="heros">
+  <div class="scroll-container" id="hero-cards">
+  
+    <!-- Cards will be inserted here -->
+  </div>
+  
+</section>
+      </div>
+    </section>
+<h1 class="head">Goa's Environment Today</h1>
+    <section class="heros">
+        <div class="scroll-container">
+  <div id="news-container">
+  
+     <div class="card" style="width: 18rem;">
+  <img src="https://static.toiimg.com/thumb/msid-121683122,imgsize-391114,width-400,height-225,resizemode-72/121683122.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Article</h5>
+    <p class="card-text">Panaji: The Goa state pollution control board (GSPCB) stated ..</p>
+    <a href="https://timesofindia.indiatimes.com/city/goa/waters-in-goas-lakes-borewells-polluted-gspcb/articleshow/121683086.cms" class="btn btn-primary">Read More</a>
+  </div>
+</div>
+
+  <div class="card" style="width: 18rem;">
+  <img src="https://media.assettype.com/heraldgoa-main%2F2025-06-07%2Fh3d0nzxk%2F1495527358-river-pollution-getty.jpg?w=1024&auto=format%2Ccompress&fit=max" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Article</h5>
+    <p class="card-text">Paradise polluted: Goa’s iconic beaches and rivers..</p>
+    <a href="https://www.heraldgoa.in/goa/goa/paradise-polluted-goas-iconic-beaches-and-rivers-face-severe-contamination/423659" class="btn btn-primary">Read More</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://ars.els-cdn.com/content/image/1-s2.0-S2772416625000919-ga1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Article</h5>
+    <p class="card-text">Anthropogenic litter pollution in the mangrove blue carbon ecosystem:...</p>
+    <a href="https://www.sciencedirect.com/science/article/pii/S2772416625000919" class="btn btn-primary">Read More</a>
+  </div>
+</div>
+  </div>
+  
+  </div>
+
+    </section>
+<h1 class="head">Our Achievements</h1>
+    <section class="achievements">
+<div class="scroll-container" id="achievement-cards">
+  <!-- Achievements will be injected here -->
+</div>
+    </section>
+
+    <h1 class="head">Be Part Of out Journey</h1>
+    <section class="form">
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name">
+  </div>
+  <div class="mb-3 form-check">
+    <label for="exampleInputPassword1" class="form-label">Add picture of your contribution</label>
+   <input type="file" accept="image/*" id="imageInput">
+
+  </div>
+  <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+</form>
+    </section>
+</main>
+
+<footer style="background-color: #1e1e1e; color: #f0f0f0; padding: 20px; text-align: center;">
+  <p>&copy; 2025 GreenWake. All rights reserved.</p>
+  <p>
+    <a href="#about" style="color: #00bfa5; text-decoration: none; margin: 0 10px;">About</a> |
+    <a href="#contact" style="color: #00bfa5; text-decoration: none; margin: 0 10px;">Contact</a> |
+    <a href="#privacy" style="color: #00bfa5; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+  </p>
+</footer>
+
+<script type="module" src="/script/script.js"></script>
+
+</body>
+</html>

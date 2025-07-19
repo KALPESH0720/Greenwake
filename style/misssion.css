@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+margin: 0;
+}
+
+marquee{
+ height: 50px;
+ background-color: antiquewhite;
+
+ justify-content: center;
+
+}
+
+nav{
+    margin: 10px;
+}
+
+
+.back-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #00bfa5;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.hide{
+  display: none;
+
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  border-color: aliceblue;
+}
